@@ -1,0 +1,20 @@
+.sidebar .follow {
+  font-size: 0.45rem;
+  /* font-weight: 700; */
+}
+
+.sidebar .github {
+  background-color: #1f2328;
+}
+.sidebar .twitter {
+  background-color: #00ace8;
+}
+.sidebar .facebook {
+  background-color: #0866ff;
+}
+.sidebar .linkedin {
+  background-color: #0a66c2;
+}
+.sidebar .whatsapp {
+  background-color: #0cc143;
+}

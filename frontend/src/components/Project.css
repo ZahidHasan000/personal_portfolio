@@ -1,0 +1,122 @@
+/* body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+} */
+
+/* Add animation keyframe */
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-120deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+/* Apply animation to project container */
+.project-container {
+  animation: transitionIn 2s ease-out forwards;
+  opacity: 0;
+  transform: rotateX(-120deg);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ... rest of your existing CSS */
+
+.custom-image {
+  width: 200px;
+  height: 200px;
+}
+
+/* CSS */
+.image-container {
+  position: relative;
+}
+
+.image-title {
+  position: absolute;
+  /* position: relative; */
+  bottom: 25px;
+  left: 50%; /* Position the title in the center horizontally */
+  transform: translateX(-50%);
+  /* transform: translate(-50%, -50%); */
+  /* visibility: hidden; */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 5px 5px;
+  /* border-radius: 10px; */
+  border-radius: 40%;
+  text-align: center;
+}
+
+.image-container:hover .image-title {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  .project-container {
+    height: 92vh; /* Adjust the height as needed */
+    /* width: auto; */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-bottom: 10px;
+  }
+
+  .project-item {
+    display: flex;
+    /* justify-content: space-between;  */
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .custom-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* CSS */
+  .image-container {
+    position: relative;
+  }
+
+  .image-title {
+    position: absolute;
+    /* position: relative; */
+    bottom: 25px;
+    left: 50%; /* Position the title in the center horizontally */
+    transform: translateX(-50%);
+    visibility: hidden; /* Hide the title by default */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 5px 5px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .pagination {
+    justify-content: center; /* Center pagination on smaller screens */
+  }
+}

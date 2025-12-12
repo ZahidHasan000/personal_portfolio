@@ -1,0 +1,254 @@
+.profile {
+  animation: transitionIn 2s;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 18px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100vh;
+  position: relative;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-120deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+.profile {
+  animation: transitionIn 2s ease-out forwards;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 18px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100vh;
+  position: relative;
+  opacity: 0; /* Start hidden */
+  transform: rotateX(-120deg); /* Start rotated */
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-120deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+.profile-content {
+  /* No need to specify grid-column or flex property */
+  position: relative; /* Ensure positioning works properly */
+  align-self: start;
+  background-color: #e3f5c3;
+  padding-left: 10px;
+  padding-right: 5px;
+  height: 100%;
+}
+
+.profile-content ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* .perso, .experience {
+    font-weight: bold;
+    font-size: 17px;
+    list-style-type: disc;
+    margin-left: 20px;
+} */
+
+.personality-list,
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.perso,
+.experience {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  align-items: start; /* This ensures top alignment */
+  font-weight: bold;
+  font-size: 17px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.perso::before,
+.experience::before {
+  content: "•";
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5; /* Match the text line height */
+}
+
+.nested-list {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  grid-column: 2; /* Place nested list in the second column */
+}
+
+.nested-list .experience {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  padding-left: 20px; /* Align with parent text */
+  margin-bottom: 8px;
+}
+
+.nested-list .experience::before {
+  content: "◦";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.profile-content h1 {
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 100px;
+}
+
+.profile-content h2 {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.another-sum {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.profile-content p {
+  /* Adjust padding as needed */
+  font-weight: bold;
+  font-size: 17px;
+  padding-left: 20px;
+}
+
+.perso {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.experience {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* .picture img { */
+.picture {
+  position: relative; /* Ensure positioning works properly */
+  align-self: start;
+  padding-top: 0px;
+  background-color: #a19f9f;
+  height: 100%;
+}
+
+.profile-image {
+  /* width: 320px; */
+  width: 365px;
+  height: auto;
+}
+
+.personal-contact {
+  font-weight: bold;
+  font-size: large;
+}
+
+.iphone2 a {
+  font-weight: bold;
+  font-size: large;
+}
+
+.email2 {
+  font-weight: bold;
+  font-size: large;
+}
+
+.skill-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.skills {
+  font-weight: bold;
+  font-size: large;
+}
+
+.skill-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.skill-progress-container {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.5s ease;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 11px;
+  opacity: 0;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.skill-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 11px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-bar:hover .skill-progress {
+  width: 100%;
+}
+
+.skill-bar:hover .skill-label {
+  opacity: 1;
+}
+
+.skill-bar:hover .progress-label {
+  opacity: 1;
+}

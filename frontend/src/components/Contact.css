@@ -1,0 +1,178 @@
+.contact-container {
+  height: 100vh; /* Set height to fill the viewport */
+  animation: transitionIn 2s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-120deg);
+  }
+  to {
+    /* background-color: rgb(39, 37, 37); */
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+.contact {
+  max-width: 730px; /* Set maximum width for better readability */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 0 20px; /* Add padding to ensure content doesn't touch edges */
+  text-align: center;
+}
+
+.map {
+  z-index: 3;
+  height: calc(100vh - 5rem); /* Adjust height as needed */
+  overflow: hidden;
+  flex: 1; /* Grow to fill available space */
+}
+
+.info h3 {
+  font-size: 1.6rem; /* Adjust heading font size for smaller screens */
+  color: chartreuse;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.info p {
+  font-size: 1.2rem; /* Adjust paragraph font size for smaller screens */
+  line-height: 1.5; /* Adjust line height for better readability */
+  font-weight: 700;
+  font-family: sans-serif;
+  color: blanchedalmond;
+}
+
+.input .flex .mr-2 {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  width: 342px;
+}
+
+.input .flex .email {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  width: 342px;
+}
+
+.input .message .mess {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 706px;
+  border-radius: 5px;
+}
+
+.success-message {
+  background-color: green; /* Green background for success message */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error-message {
+  background-color: rgb(196, 26, 26); /* Red background for error message */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn .button {
+  display: inline-block;
+  padding: 15px 30px;
+  /* background-color: #2b332b; */
+  /* background-color: var(--green); */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 1000;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 0.2s;
+  width: 710px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column;
+    height: auto; /* Remove fixed height */
+  }
+
+  .contact {
+    max-width: 92%; /* Adjust width to fit smaller screens */
+    padding: 0 8px; /* Reduce padding for smaller screens */
+    text-align: center;
+  }
+
+  .contact-container .map {
+    z-index: 3;
+    height: 50vh; /* Set height for the map on smaller screens */
+    overflow: hidden;
+  }
+
+  .info h3 {
+    font-size: 1.4rem; /* Adjust heading font size for smaller screens */
+    color: chartreuse;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+
+  .info p {
+    font-size: 1.1rem; /* Adjust paragraph font size for smaller screens */
+    line-height: 1.2; /* Adjust line height for better readability */
+    font-weight: 400;
+    font-family: sans-serif;
+    color: blanchedalmond;
+  }
+
+  .name.flex {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: stretch; /* Ensure items stretch to full width */
+    width: 100%;
+  }
+
+  .input .message {
+    width: 100%;
+  }
+
+  .input .flex .mr-2,
+  .input .flex .email,
+  .input .message .mess {
+    width: 98%; /* Adjust width for input fields to fill the container */
+    background-color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border-radius: 5px;
+    /* margin: 0 0px; */
+    /* padding: 5px 0; */
+  }
+
+  .btn .button {
+    width: 331px;
+    font-weight: 1000;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-delay: 0.2s;
+    box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  }
+
+  .success-message {
+    background-color: green; /* Green background for success message */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .error-message {
+    background-color: rgb(196, 26, 26); /* Red background for error message */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
