@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import BackGroundImage from './BackGround';
+import bg from "../assets/pbg.png";
 import Sidebar from './SideBar';
 import http from '../http';
 import './Project.css';
@@ -12,7 +13,7 @@ function Project() {
     const [projects, setProjects] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [projectsPerPage] = useState(12); // Number of projects per page
+    const [projectsPerPage] = useState(10); // Number of projects per page
 
     const indexOfLastProject = currentPage * projectsPerPage;
     const indexOfFirstProject = indexOfLastProject - projectsPerPage;
@@ -42,7 +43,7 @@ function Project() {
 
                     <div className='project-container'>
 
-                        <div className='project-item text-white pt-2 pl-12 pr-12 pb-2'>
+                        <div className='project-item text-white pt-2 pl-12 pr-12 pb-2' style={{paddingLeft: "6rem", paddingTop: "2.5rem"}}>
 
                             {/* {projects.map((item, index) => ( */}
 
@@ -62,7 +63,7 @@ function Project() {
                                         {/* projectId */}
                                     <Link to={`/project/${item._id}`}>
                                         <div className="image-container">
-                                            <img src={``}
+                                            <img src={bg}
                                                 alt="" className="custom-image" />
                                             {/* <img src={`https://zahid-portfolio-1.onrender.com/${item.imageUrl}`}
                                                 alt="" className="custom-image" /> */}

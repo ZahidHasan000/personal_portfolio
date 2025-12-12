@@ -1,7 +1,7 @@
 import Navbar from './Navbar';
 import BackGroundImage from './BackGround';
 import Skill from './Skill';
-import CV from "../assets/updated.pdf";
+import CV from "../assets/cv.pdf";
 import Sidebar from './SideBar';
 import './About.css';
 
