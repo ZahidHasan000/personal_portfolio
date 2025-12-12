@@ -139,7 +139,8 @@ app.set('trust proxy', 1);
 const allowedOrigins = [
   // 'https://portfolio-frontend-lurr.onrender.com',
   'http://localhost:5173',
-  'http://localhost:5000'
+  'http://localhost:5000',
+  'https://personal-portfolio-o1yi.onrender.com'
 ];
 
 app.use(cors({
